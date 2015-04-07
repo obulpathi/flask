@@ -33,5 +33,13 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
+@app.route('/login', methods = ['GET'])
+def get_login():
+    return 'Get credentials'
+
+@app.route('/login', methods = ['POST'])
+def post_login():
+    return 'Check credentials'
+
 if __name__ == '__main__':
   app.run(debug=True)
